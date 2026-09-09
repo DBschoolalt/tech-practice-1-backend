@@ -1,0 +1,1 @@
+start cmd /k "npm run build && npm run run"
