@@ -17,6 +17,7 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJSDoc(swaggerOptions)
 
 app.use(cors());
+app.use(express.static('public'));
 app.use(express.json())
 app.use('/api', swaggerUI.serve, swaggerUI.setup(swaggerDocs))
 
@@ -28,6 +29,7 @@ const item_manager = new ItemManager
 import { CustomerManager } from './customer_manager.js'
 const customer_manager = new CustomerManager
 
+customer_manager.add(1)
 
 item_manager.load(ItemData.read())
 ItemData.write(item_manager.get_all())
