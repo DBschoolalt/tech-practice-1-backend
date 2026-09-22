@@ -35,6 +35,34 @@ Alternatively you can just open the `test.bat` file.
 
 You can access the API documentation by running the app and then in your web browser navigating to the /api route (http://localhost:3000/api/)
 
+**/items/get** - Returns all available items.
+
+**/items/post** - Creates new item from body of the request, item ID must be unique.
+
+**/items/{id}/get** - Returns item with specified ID.
+
+**/items/{id}/patch** - Updates item with Specified ID using body of the request, ID will not be changed/
+
+**/items/{id}/delete** - Removes item with specified ID.
+
+**/items/{id}** - Returns item with specified ID.
+
+**/customers/get** - Returns all customers.
+
+**/customers/{id}/get** - Returns customer with specified ID.
+
+**/customers/{id}/post** - Creates new customer from body of the request, ID must be unique.
+
+**/customers/{id}/delete** - Removes customer with specified ID.
+
+**/customers/{id}/cart/get** - Returns cart of customer with specified ID.
+
+**/customer/{id}/cart/delete** - Clear cart of customer with specified ID.
+
+**/customer/{id}/cart/{item_id}/post** - Add item with specified item_id to cart with specified id
+
+**/customer/{id}/cart/{item_id}/delete** - Remove item with specified item_id from cart with specified id
+
 # Architecture
 
 <img width="292" height="271" alt="image" src="https://github.com/user-attachments/assets/e96eeffd-c4fd-4aea-9d05-0cf8c6c33e19" />
